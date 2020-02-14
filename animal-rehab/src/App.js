@@ -39,7 +39,7 @@ class App extends React.Component {
       animals: [],
       medicine: [],
       logDetails: [],
-      isLoggedIn: false,
+      logInStatus: false,
       accessToken: '',
       refreshToken: ''
     };
@@ -142,25 +142,27 @@ class App extends React.Component {
 
   logCreateHandler(event, logDetail, aid) {
     event.preventDefault();
-    const sortedLogs = this.state.logDetails.sort((a, b) => a.id < b.id)
-    let newId
-    if (sortedLogs[0]) {
-      newId = sortedLogs[sortedLogs.length - 1].id + 1
+    if(logDetail) {
+      const sortedLogs = this.state.logDetails.sort((a, b) => a.id < b.id)
+      let newId
+      if (sortedLogs[0]) {
+        newId = sortedLogs[sortedLogs.length - 1].id + 1
+      }
+      else {
+        newId = 1
+      }
+      const newLog = {
+        description: logDetail,
+        date: this.formatDate(),
+        aid: aid,
+        id: newId
+      }
+      this.setState({
+        logDetails: this.state.logDetails.concat([newLog])
+      })
     }
-    else {
-      newId = 1
-    }
-    const newLog = {
-      description: logDetail,
-      date: this.formatDate(),
-      aid: aid,
-      id: newId
-    }
-    this.setState({
-      logDetails: this.state.logDetails.concat([newLog])
-    })
-
   }
+
   handleDeleteLog(lid){
     lid = parseInt(lid);
     const newLogDetails = this.state.logDetails.filter(logDetail => logDetail.id !==lid);
@@ -169,6 +171,17 @@ class App extends React.Component {
       logDetails: newLogDetails
     })
   }
+
+  logInRender = () => {
+    if (this.state.accessToken) {
+      return <Animals animals={this.state.animals} onSubmit={this.animalCreateHandler} />
+    } 
+    return <LogInForm onSuccess={this.loginHandler} />
+  }
+
+  refresh = () => {
+    return window.location.reload();
+  } 
 
   renderAnimals(props) {
 
@@ -190,48 +203,42 @@ class App extends React.Component {
 
   render() {
 
-    let { medicine, animals } = this.state
+    let { medicine, animals, accessToken, logDetails } = this.state
 
     return (
       <Router>
         <div>
           <Header />
-          <Nav />
+          <Nav
+            refresh={this.refresh}
+            accessToken={accessToken}
+          />
           <Footer />
           <Switch>
             <Route exact path="/">
               <Home />
             </Route>
             <Route path="/dose">
-              <Dose medicine={this.state.medicine} />
+              <Dose medicine={medicine} />
             </Route>
             <Route path="/medicine">
               <Medicine medicine={medicine} />
             </Route>
             <Route exact path="/animals">
-
-              {this.state.accessToken ?
-                <Animals animals={this.state.animals} onSubmit={this.animalCreateHandler} /> :
-                <LogInForm onSuccess={this.loginHandler} />}
-
+              {this.logInRender}
             </Route>
             <Route path="/animals/:aid" render={this.renderAnimals}>
               <AnimalProfile
-                logDetails={this.state.logDetails}
-                animals={this.state.animals}
+                logDetails={logDetails}
+                animals={animals}
                 logCreateHandler={this.logCreateHandler} 
                 handleDeleteAnimal={this.handleDeleteAnimal}
                 handleDeleteLog= {this.handleDeleteLog}/>
             </Route>
-
-            <Route path="/log">
-              <LogInForm />
-            </Route>
-
-          </Switch>
-      
-      
-          
+            <Route path="/login">
+                {this.logInRender}
+            </Route> 
+          </Switch> 
         </div>
       </Router>
     );
@@ -239,6 +246,7 @@ class App extends React.Component {
 }
 
 function Nav(props) {
+  console.log('props token', props.accessToken)
   return (
     <nav>
       <ul id="nav">
@@ -246,7 +254,10 @@ function Nav(props) {
         <li><NavLink to="/dose">Dose</NavLink></li>
         <li><NavLink to="/medicine">Medicine</NavLink></li>
         <li><NavLink to="/animals">Animals</NavLink></li>
-        <li><NavLink to="/log">Log in</NavLink></li>
+        {props.accessToken ? 
+        <li><NavLink to="/logout" onClick={props.refresh}>Log out</NavLink></li> :
+        <li><NavLink to="/login">Log in</NavLink></li>
+        }
       </ul>
     </nav>
   )
