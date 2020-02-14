@@ -16,7 +16,8 @@ class AnimalProfileForm extends React.Component {
       [event.target.name]: event.target.value
     })
   }
-  stateDefault(){
+  stateDefault(event){
+    event.preventDefault()
     this.setState({
       logDetail: '',
     })
@@ -26,7 +27,7 @@ class AnimalProfileForm extends React.Component {
     return (
       <>
         <form onSubmit={(event) => {
-          this.stateDefault()
+          this.stateDefault(event)
           this.props.logCreateHandler(event, this.state.logDetail, this.props.animal.id)
           
         }}>

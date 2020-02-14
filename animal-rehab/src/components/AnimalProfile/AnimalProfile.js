@@ -11,29 +11,52 @@ export default props => {
   if (animal) {
     return (
       <>
-        <h2>{animal.name}</h2>
-        <p>{`${animal.entry_at}`}</p>
-        <button type="submit" onClick= {Date.now()}>Close Out Animal </button>
-        <Link to="/animals" onClick={() => props.handleDeleteAnimal(aid)}>Delete Animal</Link>
-        
-        <h3>Data Log Details</h3>
-        <AnimalProfileForm
-          logCreateHandler={props.logCreateHandler}
-          animal={animal}
-        />
-        <section>
+        <table>   
+          <thead>
+            <tr>
+              <th>Animal</th>
+              <th>Entry date</th>
+              <th>Delete Animal</th>
+            </tr>
+          </thead>
+          <tbody> 
+            <tr>
+              <td>{animal.name}</td>
+              <td>{`${animal.entry_at.slice(0,10)}`}</td>
+              <td><button type="submit"  
+              to="/animals" onClick={() => props.handleDeleteAnimal(aid)}>Delete Animal</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table> 
+          <thead>
+            <tr>
+            <th>Date</th>
+            <th>Animal Logs</th>
+            <th>Delete</th>
+            </tr>
+          </thead> 
+       <tbody>
           {props.logDetails.map(logDetail => {
             if (logDetail.aid === animal.id) {
               return (
-                <section>
-                  <p>{logDetail.date}</p>
-                  <p>{logDetail.description}</p>
-                  <button onClick={() => props.handleDeleteLog(logDetail.id)}>Delete Log </button>
-                </section>
+                  <tr>
+                  <td>{logDetail.date}</td>
+                  <td>{logDetail.description}</td>
+                  <td><button onClick={() => props.handleDeleteLog(logDetail.id)}>Delete Log </button></td>
+                  </tr>
+        
               );
             }
           })}
-        </section>
+              </tbody>
+        </table>
+        <form>
+        <AnimalProfileForm
+          logCreateHandler={props.logCreateHandler}
+          animal={animal}/>
+        </form>
       </>
     );
   } else {

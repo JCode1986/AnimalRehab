@@ -23,6 +23,7 @@ import './components/Home/Home.scss';
 import './components/Dose/Dose.scss';
 import './components/Medicine/Medicine.scss';
 import './components/Animals/Animals.scss';
+import './components/AnimalProfile/AnimalProfile.scss';
 import './components/Footer/Footer.scss';
 import './components/LogInForm/LogInForm.scss';
 import './components/Header/Header.scss';
@@ -79,7 +80,7 @@ class App extends React.Component {
   animalCreateHandler(name) {
 
     const sortedAnimals = this.state.animals.sort((a,b) => a.id < b.id)
-    const newId = sortedAnimals[sortedAnimals.length-1].id
+    const newId = sortedAnimals[sortedAnimals.length-1].id + 1
     // const newId = this.state.animals.length + 1
     if (name) {
       const newAnimal = {
@@ -151,7 +152,7 @@ class App extends React.Component {
     }
     const newLog = {
       description: logDetail,
-      date: String(Date()),
+      date: this.formatDate(),
       aid: aid,
       id: newId
     }
