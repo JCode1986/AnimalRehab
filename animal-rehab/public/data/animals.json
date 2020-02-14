@@ -1,7 +1,32 @@
 [
-	{"name": "Mouse 1", "id": 1, "date": "Mon Dec 25 2019"},
-	{"name": "Mouse 2", "id": 2, "date": "Tues Dec 28 2019"},
-	{"name": "Cheetah 1", "id": 3, "date": "Wed Dec 30 2019"},
-	{"name": "Racoon 1", "id": 4, "date": "Thur Jan 13 2020"},
-	{"name": "Racoon 2", "id": 5, "date": "Fri Feb 02 2020"}
+	{
+		"id": 1,
+		"name": "Mouse",
+		"entryAt": "Mon Dec 25 2019",
+		"exitAt": ""
+	},
+	{
+		"id": 2,
+		"name": "Cat",
+		"entryAt": "Tues Dec 28 2019",
+		"exitAt": "Wed Dec 27 2019"
+	},
+	{
+		"id": 3,
+		"name": "Cheetah",
+		"entryAt": "Wed Dec 30 2019",
+		"exitAt": "Thu Dec 31 2019"
+	},
+	{
+		"id": 4,
+		"name": "Racoon",
+		"entryAt": "Thur Jan 13 2020",
+		"exitAt": ""
+	},
+	{
+		"id": 5,
+		"name": "Racoon 2",
+		"entryAt": "Fri Feb 02 2020",
+		"exitAt": ""
+	}
 ]

@@ -1,6 +1,10 @@
 from rest_framework import serializers
 from .models import Medicine, Animal, Log
 
+
+# Medicine serializers
+
+
 class MedicineSerializer(serializers.ModelSerializer):
     """Serialize medicine model."""
     class Meta:
@@ -8,12 +12,28 @@ class MedicineSerializer(serializers.ModelSerializer):
         model = Medicine
         fields = ['id', 'name', 'category','description']
 
+
+# Animal serializers
+
+
 class AnimalSerializer(serializers.ModelSerializer):
     """Serialize animal model."""
     class Meta:
         """Create animal serialization."""
         model = Animal
-        fields = ['id','vet', 'name', 'weight', 'entry_at','exit_at', 'details', 'is_archived']
+        fields = ['id','vet', 'name', 'weight', 'entry_at', 'details', 'is_archived']
+
+
+class CreateAnimalSerializer(serializers.ModelSerializer):
+    """Serialization fields for creating animal."""
+    class Meta:
+        """Create an animal."""
+        model = Animal
+        fields = ['id', 'vet', 'name', 'weight', 'details']
+
+
+# Log serializers
+
 
 class LogSerializer(serializers.ModelSerializer):
     """Serialize log model."""

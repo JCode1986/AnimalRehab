@@ -3,7 +3,10 @@ import React from "react";
 class Footer extends React.Component {
     render() {
         return <footer>
-            Lorem ipsum dolor amet tofu heirloom deep v, iceland gastropub shabby chic forage humblebrag succulents williamsburg activated charcoal. Franzen gastropub shabby chic tilde letterpress, microdosing unicorn twee narwhal bushwick. Bicycle rights VHS etsy, hell of lyft chillwave normcore cold-pressed stumptown authentic deep v. Thundercats yr tilde direct trade, cold-pressed wolf scenester. Poutine mixtape sartorial blue bottle PBR&B portland scenester tbh green juice umami readymade YOLO activated charcoal tofu. Offal iceland locavore pickled. Plaid four loko offal authentic truffaut readymade direct trade swag succulents bushwick.
+            <div className='footer'>
+                <p>Medical Disclaimer</p>
+                <p>All content found on this website, including: text, images, or other formats were created for educational purposes only. If you or someone else has found an animal in need or are looking for medical advice, please contact your nearest wildlife vet. We do not recommend you to handle or care for wild animals without the proper license and skills.</p>
+            </div>
         </footer>
     }
 }

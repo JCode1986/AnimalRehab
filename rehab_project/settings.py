@@ -25,7 +25,13 @@ SECRET_KEY = ')f!+pdudig7(1b7%(e7!#w2*prt!s0-d@&keo6v1=732hnq0*g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', '64.225.2.201']
+
+#change to origin whitelist when frontend is deployed
+# CORS_ORIGIN_ALLOW_ALL = True
+
+# when you have a frontend API
+CORS_ORIGIN_WHITELIST = ["https://animal-rehab.josephhangarter.now.sh/"]
 
 
 # Application definition
@@ -43,11 +49,13 @@ INSTALLED_APPS = [
 
     #3rd party apps
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -135,5 +143,11 @@ STATICFILES_DIRS = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated']
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated'],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ],
 }
