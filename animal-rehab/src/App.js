@@ -80,7 +80,7 @@ class App extends React.Component {
   animalCreateHandler(name) {
 
     const sortedAnimals = this.state.animals.sort((a,b) => a.id < b.id)
-    const newId = sortedAnimals[sortedAnimals.length-1].id
+    const newId = sortedAnimals[sortedAnimals.length-1].id + 1
     // const newId = this.state.animals.length + 1
     if (name) {
       const newAnimal = {
@@ -152,7 +152,7 @@ class App extends React.Component {
     }
     const newLog = {
       description: logDetail,
-      date: String(Date()),
+      date: this.formatDate(),
       aid: aid,
       id: newId
     }

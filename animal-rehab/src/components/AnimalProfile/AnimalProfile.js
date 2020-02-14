@@ -11,10 +11,24 @@ export default props => {
   if (animal) {
     return (
       <>
-        <h2>{animal.name}</h2>
-        <p>{`${animal.entry_at}`}</p>
-        <button type="submit" onClick= {Date()}>Close Out Animal </button>
-        <Link to="/animals" onClick={() => props.handleDeleteAnimal(aid)}>Delete Animal</Link>
+        <table>   
+          <thead>
+            <tr>
+              <th>Animal</th>
+              <th>Entry date</th>
+              <th>Delete Animal</th>
+            </tr>
+          </thead>
+          <tbody> 
+            <tr>
+              <td>{animal.name}</td>
+              <td>{`${animal.entry_at.slice(0,10)}`}</td>
+              <td><button type="submit"  
+              to="/animals" onClick={() => props.handleDeleteAnimal(aid)}>Delete Animal</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <table> 
           <thead>
             <tr>
@@ -23,19 +37,20 @@ export default props => {
             <th>Delete</th>
             </tr>
           </thead> 
-        <section>
+       <tbody>
           {props.logDetails.map(logDetail => {
             if (logDetail.aid === animal.id) {
               return (
-                <tbody>
+                  <tr>
                   <td>{logDetail.date}</td>
                   <td>{logDetail.description}</td>
                   <td><button onClick={() => props.handleDeleteLog(logDetail.id)}>Delete Log </button></td>
-            </tbody>
+                  </tr>
+        
               );
             }
           })}
-        </section>
+              </tbody>
         </table>
         <form>
         <AnimalProfileForm
