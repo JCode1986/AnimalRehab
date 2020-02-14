@@ -1,7 +1,7 @@
 [
 	{
 		"id": 1,
-		"name": "SMZ (Bactrim)",
+		"name": "SMZ (Bactrim) 400mg",
 		"type": "antibiotic",
 		"dose": 20,
 		"pillStrength": 400,
@@ -51,8 +51,176 @@
 		"id": 7,
 		"name": "Cipro",
 		"type": "antibiotic",
-		"dose": 1.5,
+		"dose": 15,
 		"pillStrength": 500,
 		"description": "Treat respiratory infections"
-	}
+	},
+	{
+		"id": 8,
+		"name": "SMZ (Bactrim) 800mg",
+		"type": "antibiotic",
+		"dose": 20,
+		"pillStrength": 800,
+		"description": "Used to treat infections"
+	},
+	{
+		"id": 9,
+		"name": "Clavamox (Augmentin) 500 mg",
+		"type": "antibiotic",
+		"dose": 20,
+		"pillStrength": 500,
+		"description": "Skin and soft tissue infections"
+	},
+	{
+		"id": 10,
+		"name": "Clavamox (Augmentin) 875 mg",
+		"type": "antibiotic",
+		"dose": 20,
+		"pillStrength": 875,
+		"description": "Skin and soft tissue infections"
+	},
+	{
+		"id": 11,
+		"name": "Clindamycin",
+		"type": "antibiotic",
+		"dose": 15,
+		"pillStrength": 25,
+		"description": "Abcesses, bone, joints"
+	},
+	{
+		"id": 12,
+		"name": "Metacam 1.5mg/ml",
+		"type": "misc",
+		"dose": 0.5,
+		"pillStrength": 1.5,
+		"description": "Anti-inflammatory, analgesic"
+	},
+	{
+		"id": 13,
+		"name": "Metacam .5mg/ml",
+		"type": "misc",
+		"dose": 0.5,
+		"pillStrength": 0.5,
+		"description": "Anti-inflammatory, analgesic"
+	},
+	{
+		"id": 14,
+		"name": "Dicloxacillin (Cloxaclan) 500 mg",
+		"type": "antibiotic",
+		"dose": 30,
+		"pillStrength": 500,
+		"description": "Mostly for skin infections"
+	},
+	{
+		"id": 15,
+		"name": "Dicloxacillin (Cloxaclan) 1 gm",
+		"type": "antibiotic",
+		"dose": 30,
+		"pillStrength": 1000,
+		"description": "Mostly for skin infections"
+	},
+	{
+		"id": 16,
+		"name": "Dexamethasone (Alin) premixed",
+		"type": "misc",
+		"dose": 2,
+		"pillStrength": 8,
+		"description": "Allergies, inflammation, Addison's disease, colitis, lupus, acute arthritis, cancers, brain swelling."
+	},
+	{
+		"id": 17,
+		"name": "Dexamethasone (Alin) 0.5 mg",
+		"type": "misc",
+		"dose": 2,
+		"pillStrength": 0.5,
+		"description": "2mg/kg Day 1; 1mg/kg Day 2; 0.5mg/kg Day 3,4,6"
+	},
+	{
+		"id": 18,
+		"name": "Metronidazole (Flagyl) 500 mg",
+		"type": "antibiotic",
+		"dose": 25,
+		"pillStrength": 500,
+		"description": "UTI Infections, diarrhea, Giardia, Periodontal disease"
+	},
+	{
+		"id": 19,
+		"name": "Metronidazole (Flagyl) 250 mg",
+		"type": "antibiotic",
+		"dose": 25,
+		"pillStrength": 250,
+		"description": "UTI Infections, diarrhea, Giardia, Periodontal disease"
+	},
+	{
+		"id": 20,
+		"name": "Prednisone (injectible) 10mg/ml",
+		"type": "antibiotic",
+		"dose": 5.5,
+		"pillStrength": 10,
+		"description": "Steroid, especially used for traumatic neurologic inflammation"
+	},
+	{
+		"id": 21,
+		"name": "Prilosec (Omeprazole)",
+		"type": "misc",
+		"dose": 1,
+		"pillStrength": 20,
+		"description": "Gastric and Intestinal Ulcers"
+	},
+	{
+		"id": 22,
+		"name": "Diphenhydramine (Benadryl)",
+		"type": "misc",
+		"dose": 2,
+		"pillStrength": 12.5,
+		"description": "Childrens Benedryl 12.5mg/5ml"
+	},
+	{
+		"id": 23,
+		"name": "Versed (Midazolam) premixed SC",
+		"type": "misc",
+		"dose": 0.6,
+		"pillStrength": 5,
+		"description": "Preanesthetic/tranquilizer for Incisor reduction."
+	},
+	{
+		"id": 24,
+		"name": "Versed (Midazolam)",
+		"type": "misc",
+		"dose": 0.2,
+		"pillStrength": 1,
+		"description": "Anticonvulsant, IM 1mg/ml"
+	},
+	{
+		"id": 25,
+		"name": "Alprazolam (Xanax)",
+		"type": "misc",
+		"dose": 0.1,
+		"pillStrength": 0.25,
+		"description": "Calming, anti-anxiety fat soluble. Mix with coconut oil or similar."
+	},
+	{
+		"id": 26,
+		"name": "Baycox (Toltrazuril)",
+		"type": "misc",
+		"dose": 15,
+		"pillStrength": 25,
+		"description": "Antiprotozoal for coccidiosis, PO SID for 5 days, 25mg/ml"
+	},
+	{
+		"id": 27,
+		"name": "Simethicone",
+		"type": "misc",
+		"dose": 1,
+		"pillStrength": 1,
+		"description": "Treat gas/bloating"
+	},
+	{
+		"id": 28,
+		"name": "Vitamin K",
+		"type": "misc",
+		"dose": 1,
+		"pillStrength": 1,
+		"description": "Rodenticide toxicity: 2.5mg/kg once, then 1.1mg/kg SQ then PO BID, up to 6 months due to prolonged effect of 3rd generation rodenticides"
+	},
 ]
