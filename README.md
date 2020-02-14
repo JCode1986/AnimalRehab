@@ -36,6 +36,7 @@ React Deployment - Zeit Now
 
 Django Deployment - Digital Ocean
 * http://64.225.2.201:8000/api/v1/animal/
+* https://animal-back-end.xyz/
 
 - Animal In-Care Page
   - Initial Render
