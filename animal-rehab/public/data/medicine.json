@@ -221,6 +221,6 @@
 		"type": "misc",
 		"dose": 1,
 		"pillStrength": 1,
-		"description": "Rodenticide toxicity: 2.5mg/kg once, then 1.1mg/kg SQ then PO BID, up to 6 months due to prolonged effect of 3rd generation rodenticides"
-	},
+		"description": "Rodenticide toxicity"
+	}
 ]
