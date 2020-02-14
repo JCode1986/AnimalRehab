@@ -23,6 +23,7 @@ import './components/Home/Home.scss';
 import './components/Dose/Dose.scss';
 import './components/Medicine/Medicine.scss';
 import './components/Animals/Animals.scss';
+import './components/AnimalProfile/AnimalProfile.scss';
 import './components/Footer/Footer.scss';
 import './components/LogInForm/LogInForm.scss';
 import './components/Header/Header.scss';

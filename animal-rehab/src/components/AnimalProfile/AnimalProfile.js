@@ -13,27 +13,35 @@ export default props => {
       <>
         <h2>{animal.name}</h2>
         <p>{`${animal.entry_at}`}</p>
-        <button type="submit" onClick= {Date.now()}>Close Out Animal </button>
+        <button type="submit" onClick= {Date()}>Close Out Animal </button>
         <Link to="/animals" onClick={() => props.handleDeleteAnimal(aid)}>Delete Animal</Link>
-        
-        <h3>Data Log Details</h3>
-        <AnimalProfileForm
-          logCreateHandler={props.logCreateHandler}
-          animal={animal}
-        />
+        <table> 
+          <thead>
+            <tr>
+            <th>Date</th>
+            <th>Animal Logs</th>
+            <th>Delete</th>
+            </tr>
+          </thead> 
         <section>
           {props.logDetails.map(logDetail => {
             if (logDetail.aid === animal.id) {
               return (
-                <section>
-                  <p>{logDetail.date}</p>
-                  <p>{logDetail.description}</p>
-                  <button onClick={() => props.handleDeleteLog(logDetail.id)}>Delete Log </button>
-                </section>
+                <tbody>
+                  <td>{logDetail.date}</td>
+                  <td>{logDetail.description}</td>
+                  <td><button onClick={() => props.handleDeleteLog(logDetail.id)}>Delete Log </button></td>
+            </tbody>
               );
             }
           })}
         </section>
+        </table>
+        <form>
+        <AnimalProfileForm
+          logCreateHandler={props.logCreateHandler}
+          animal={animal}/>
+        </form>
       </>
     );
   } else {
