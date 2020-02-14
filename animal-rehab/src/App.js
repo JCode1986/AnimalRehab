@@ -228,6 +228,8 @@ class App extends React.Component {
             </Route>
 
           </Switch>
+      
+      
           <Footer />
         </div>
       </Router>

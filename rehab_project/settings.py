@@ -28,10 +28,10 @@ DEBUG = True
 ALLOWED_HOSTS = ['0.0.0.0', '64.225.2.201']
 
 #change to origin whitelist when frontend is deployed
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
 
 # when you have a frontend API
-# CORS_ORIGIN_WHITELIST = ["https://animal-rehab.josephhangarter.now.sh/"]
+CORS_ORIGIN_WHITELIST = ["https://animal-rehab.josephhangarter.now.sh/"]
 
 
 # Application definition

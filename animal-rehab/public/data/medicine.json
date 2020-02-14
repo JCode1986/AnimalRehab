@@ -4,7 +4,7 @@
 		"name": "SMZ (Bactrim)",
 		"type": "antibiotic",
 		"dose": 20,
-		"pillStregth": 400,
+		"pillStrength": 400,
 		"description": "Used to treat infections"
 	},
 	{
@@ -12,7 +12,7 @@
 		"name": "Baytril",
 		"type": "antibiotic",
 		"dose": 10,
-		"pillStregth": 22.7,
+		"pillStrength": 22.7,
 		"description": "Skin treatment"
 	},
 	{
@@ -20,7 +20,7 @@
 		"name": "Tramadol",
 		"type": "pain-reliever",
 		"dose": 4,
-		"pillStregth": 50,
+		"pillStrength": 50,
 		"description": "Works synergestically with metacam"
 	},
 	{
@@ -28,7 +28,7 @@
 		"name": "Capstar (Nitenpryam)",
 		"type": "misc",
 		"dose": 1,
-		"pillStregth": 11.4,
+		"pillStrength": 11.4,
 		"description": "Kills fleas"
 	},
 	{
@@ -36,7 +36,7 @@
 		"name": "Valium (Diazepam)",
 		"type": "misc",
 		"dose": 1.5,
-		"pillStregth": 5,
+		"pillStrength": 5,
 		"description": "Calms muscles"
 	},
 	{
@@ -44,7 +44,7 @@
 		"name": "Buprenorphine",
 		"type": "pain-reliever",
 		"dose": 0.3,
-		"pillStregth": 0.3,
+		"pillStrength": 0.3,
 		"description": "Pain management"
 	},
 	{
@@ -52,7 +52,7 @@
 		"name": "Cipro",
 		"type": "antibiotic",
 		"dose": 1.5,
-		"pillStregth": 500,
+		"pillStrength": 500,
 		"description": "Treat respiratory infections"
 	}
 ]

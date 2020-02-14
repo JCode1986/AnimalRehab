@@ -1,19 +1,19 @@
-footer {
+.footer {
     bottom: 0;
     width: 100%;
     color: black;
     text-align: center;
-    background-color: teal
-}
-
-.footer{
+    background-color: teal;
     justify-content: center;
-    width: 1200px;
     margin: auto;
-    height: 150px;
-    line-height: 2em;
+    height: 100px;
+    line-height: 1.5em;
+    position: fixed;
 }
 
 .footer > p {
-    justify-content: center;
+    align-items: center;
+    max-width: 950px;
+    margin:auto;
+    font-weight: bold;
 }
