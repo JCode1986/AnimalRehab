@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 const url = 'http://64.225.2.201:8000/api/';
-
+// const url = 'animal-back-end.xyz'
 class LoginForm extends Component {
 
     constructor(props) {
