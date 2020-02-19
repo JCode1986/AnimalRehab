@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import datetime
 
 # Create your models here.
 class Medicine(models.Model):
@@ -18,7 +19,7 @@ class Animal(models.Model):
     name = models.CharField(max_length=31)
     weight = models.FloatField()
     entry_at = models.DateTimeField(auto_now_add=True)
-    exit_at = models.DateTimeField(null=True)
+    exit_at = models.DateTimeField(auto_now=True)
     details = models.TextField()
     is_archived = models.BooleanField()
 

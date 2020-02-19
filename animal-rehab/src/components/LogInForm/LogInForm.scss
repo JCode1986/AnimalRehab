@@ -1,0 +1,43 @@
+body{
+  background-color: #79ADDB
+}
+
+.RegisterUser{
+  background-color: #fff;
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 25px;
+  box-shadow: 0px 10px 50px #555;
+}
+
+.username{
+  width: 200px;
+  border-bottom: 1px solid black;
+  margin: auto;
+}
+
+.password{
+  width: 200px;
+  border-top: 1px solid black;
+  margin: auto;
+}
+
+.button{
+  justify-content: center;
+  cursor: pointer;
+  width: 200px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.button:hover {
+  background-color: #519e8a;
+  color: #fff;
+  border: 1px solid #fff;
+}

@@ -1,4 +1,4 @@
-.animals {
+.animalProfile {
 	float:none;
 	list-style-type: none;
 	text-align: center;
@@ -10,7 +10,7 @@
 	text-align: center;
 }
 
-.animalForm {
+.animalProfileForm {
 	justify-content: center;
 }
 
@@ -21,32 +21,8 @@ table {
 	margin-top: 3em;
 }
 
-fieldset {
+section {
 	margin-left:auto; 
     margin-right:auto;
 }
 
-th {
-	background-color:lightsteelblue;
-	border: 1px solid black;
-	padding: 5px;
-}
-
-td {
-	background-color: whitesmoke;
-	border: 1px solid black;
-	padding: 5px;
-	text-align: center;
-}
-
-h2 {
-	text-align: center;
-}
-
-h3 {
-	text-align: center;
-}
-
-p {
-	text-align: center;
-}

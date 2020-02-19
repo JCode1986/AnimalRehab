@@ -1,9 +1,9 @@
 .wrapper {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     background-color: #79ADDB;
   }
@@ -98,6 +98,11 @@ input::placeholder {
   border: 2px solid #fff;
 }
 
+select{
+  width:100%;
+  text-indent: 90px;
+}
+
 .radioContainer{
   display: flex;
   align-content: space-between;
@@ -105,4 +110,8 @@ input::placeholder {
 
 .radio {
   align-content: space-between;
+}
+
+.footer{
+  position: relative;
 }
