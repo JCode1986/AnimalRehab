@@ -35,7 +35,7 @@ React Deployment - Zeit Now
 * https://animal-rehab.josephhangarter.now.sh/
 
 Django Deployment - Digital Ocean
-* http://64.225.2.201:8000/api/v1/animal/
+* http://64.225.2.201:8000/api/v1/animals/
 * https://animal-back-end.xyz/
 
 - Animal In-Care Page
